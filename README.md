@@ -20,9 +20,32 @@ Things to Note:
 
   ## 🧩 BOOKMARKLETS —
 
+  ### GENERAL -
+
+### SITE-SPECIFIC -
+
+### DEV-RELATED - 
+
+### EASE-OF-USE - 
+
+### MENUS-OR-COLLECTIONS - 
+
+### GUI - 
+
+### SORT - 
+
+
 > *Just mouse over the code and click the Copy button on the top right. Make a new bookmark, name it and then paste the code in the URL to create the bookmarklet.*
 
 ---
+
+Template (ignore) -
+```jsx
+   
+```
+
+
+
     
 - PAGE NAVIGATION & MANAGEMENT —
     - Paywall/Annoying Message Remover -
@@ -42,9 +65,28 @@ Things to Note:
         ```jsx
         javascript:(function(){ var e,s; IB=-1; function isDigit(c) { return ("0" <= c && c <= "9") } L = location.href; LL = L.length; for (e=LL-1; e>=0; --e) if (isDigit(L.charAt(e))) { for(s=e-1; s>=0; --s) if (!isDigit(L.charAt(s))) break; break; } ++s; if (e<0) return; oldNum = L.substring(s,e+1); newNum = "" + (parseInt(oldNum,10) + IB); while (newNum.length < oldNum.length) newNum = "0" + newNum; location.href = L.substring(0,s) + newNum + L.slice(e+1); })();
         ```
+
+     - Page Element Isolator —
         
-- OSINT —
-    
+        ```jsx
+        javascript:void%28%28%29%3D%3E%7B%28function%28%29%7B%22use%20strict%22%3Bfunction%20m%28t%29%7Blet%20a%2Co%3Dt%2Cs%3Dt.tagName.toLowerCase%28%29%2Ci%3D%22%22%2Cd%3D%22%22%2Cl%3D%22%22%2Cr%3D%22%22%3Bfor%28%3Bo.parentNode%3B%29%7Bif%28%28a%3Do.parentNode%29.tagName%29%7Bi%3Da.tagName.toLowerCase%28%29%3Blet%20c%3Da.querySelectorAll%28%22%3Ascope%20%3E%20%22+o.tagName%29%3Bl%3Dc.length%3E1%3F%22%5B%22+parseInt%28Array.from%28c%29.indexOf%28o%29+1%29+%22%5D%22%3A%22%22%2Cd%3D%28s%3Do.tagName.toLowerCase%28%29%29+l+r+d%2Cr%3D%22/%22%7D%0Ao%3Da%7D%0Areturn%20i%3D%3D%3D%22%22%26%26%28i%3Ds%29%2Cd%3D%22//%22+i+l+r+d%7D%0Afunction%20y%28%29%7Blet%20t%2Ca%2Co%2Cs%3D%210%2Ci%3D%211%2Cd%3Ddocument.querySelectorAll%28%22*%22%29%3Bfunction%20l%28e%2Cn%29%7Bt%3De%2Cn.stopPropagation%28%29%2Ci%7C%7Cc%28e%29%2Cp%28t%29%7D%0Afunction%20r%28e%29%7Be.classList.remove%28%22isolatorHighlight%22%29%7D%0Afunction%20c%28e%29%7Be.classList.add%28%22isolatorHighlight%22%29%7D%0Afunction%20p%28e%29%7Bconsole.clear%28%29%2Cconsole.log%28m%28e%29%29%2Co.innerHTML%3Dm%28e%29%7D%0AArray.from%28d%29.forEach%28e%3D%3E%7Be.addEventListener%28%22click%22%2Cn%3D%3E%7Bconsole.log%28%22preventClicks%20%3D%20%22%2Cs%29%2Cs%26%26%28function%28f%2Cu%29%7Bt%3Df%2Cf.tagName%3D%3D%3D%22HTML%22%26%26%28s%3D%211%29%2Cfunction%28g%29%7Bif%28%21i%29%7Blet%20h%3Dg.parentNode%2Cv%3Dh.childNodes%3Bh.tagName%21%3D%3D%22HTML%22%3FArray.from%28v%29.forEach%28x%3D%3E%7Bx%21%3D%3Dg%26%26x.remove%28%29%7D%29%3Ai%3D%210%7D%7D%28f%29%7D%28e%29%2Cn.preventDefault%28%29%29%7D%29%2Ce.addEventListener%28%22mouseover%22%2Cn%3D%3E%7Bt%3De%2Cn.stopPropagation%28%29%2Ci%7C%7Cc%28e%29%2Cp%28t%29%7D%29%2Ce.addEventListener%28%22mouseout%22%2Cn%3D%3E%7Br%28e%29%7D%29%7D%29%2Cfunction%28%29%7Blet%20e%3Ddocument.createElement%28%22style%22%29%3Be.textContent%3D%22.isolatorHighlight%7Boutline%3A4px%20solid%20black%21important%3Boutline-offset%3A-4px%21important%3B-webkit-box-shadow%3A%200px%200px%200px%204px%20%23fff%3B%20box-shadow%3A%200px%200px%200px%204px%20%23fff%3B%7D%23infoPanel%20%7Bz-index%3A1000%3Bfont-size%3A20px%3Bbackground%3Argba%280%2C0%2C0%2C0.8%29%3Bcolor%3A%23fff%3Bfont-weight%3Abold%3Bpadding%3A10px%3Bposition%3Afixed%3Bbottom%3A20px%3Bleft%3A20px%3Bfont-family%3Asans-serif%3B%7D%20%23infoPanel%3Aempty%20%7Bvisibility%3Ahidden%3B%7D%20%23infoPanel%20code%20%7Bcolor%3Alime%7D%22%2Cdocument.head.appendChild%28e%29%7D%28%29%2C%28o%3Ddocument.createElement%28%22div%22%29%29.setAttribute%28%22id%22%2C%22infoPanel%22%29%2Co.setAttribute%28%22role%22%2C%22status%22%29%2Cdocument.body.appendChild%28o%29%2Cdocument.addEventListener%28%22keydown%22%2Cfunction%28e%29%7Bif%28e.key%3D%3D%3D%22ArrowUp%22%26%26%28e.preventDefault%28%29%2Ct.parentNode%26%26t.tagName%21%3D%3D%22HTML%22%26%26%28r%28t%29%2Cconsole.log%28%22currentEl.parentNode%20%3D%20%22%2Ct.parentNode%29%2Ca%3Dt.parentNode%2Cc%28t%3Da%29%29%2Cp%28t%29%2Co.textContent%3Do.textContent+%22%20%28Press%20Return%20to%20isolate%20this%20element%29%22%29%2Ce.key%3D%3D%3D%22ArrowLeft%22%26%26%28e.preventDefault%28%29%2Ct.previousElementSibling%26%26%28r%28t%29%2Cl%28t%3Dt.previousElementSibling%2Ce%29%29%29%2Ce.key%3D%3D%3D%22ArrowRight%22%26%26%28e.preventDefault%28%29%2Ct.nextElementSibling%26%26%28r%28t%29%2Cl%28t%3Dt.nextElementSibling%2Ce%29%29%29%2Ce.key%3D%3D%3D%22ArrowDown%22%26%26%28e.preventDefault%28%29%2Ct.childNodes.length%3E1%29%29%7Br%28t%29%3Blet%20n%2Cf%3D%211%3BArray.from%28t.childNodes%29.forEach%28u%3D%3E%7Bu.nodeType%21%3D%3D1%7C%7Cf%7C%7C%28f%3D%210%2Cn%3Du%29%7D%29%2Cn%26%26l%28t%3Dn%2Ce%29%7D%0Ae.key%3D%3D%3D%22Enter%22%26%26%28e.preventDefault%28%29%2Ct.click%28%29%29%7D%29%2Cp%28%22Isolator%20started.%20Click%20on%20element%20you%20want%20to%20isolate%20in%20the%20DOM%22%29%7D%0Ay%28%29%7D%29%28%29%3B%7D%29%28%29%3B
+
+        ```
+Yandex Reverse Image - Click the bookmarklet, then click on any image currently on the page
+```jsx
+javascript:javascript%3Afunction yandexify%28event%29%7Blet img%3Devent.target%3Blet y%3D%27https%3A//yandex.com/images/search%3Frpt%3Dimageview%26url%3D%27%3Bwindow.open%28y+img.src%29%3Bimg.removeEventListener%28%27click%27%2Cyandexify%29%3B%7D%0AArray.from%28document.querySelectorAll%28%27img%27%29%29.forEach%28el%3D>el.addEventListener%28%27click%27%2Cyandexify%29%29%3B   
+```
+
+View all images on page -
+  ```jsx
+  javascript:void (()=>%7B(function()%7B"use strict";function v()%7Bconsole.clear();function f(e)%7Blet r=window.getComputedStyle(e);return r.display==="none"%7C%7Cr.opacity===0%7C%7Cr.clipPath==="inset(100%25)"&&r.clip==="rect(1px, 1px, 1px, 1px)"%7C%7Cr.height==="1px"&&r.width==="1px"&&r.overflow==="hidden"%7Dfunction T(e)%7Blet r=window.getComputedStyle(e);r.position==="absolute"&&r.overflow==="hidden"&&(e.style.height="auto",e.style.width="auto",e.style.position="relative",e.style.overflow="visible",e.style.display="block",e.style.opacity=1),(e.getAttribute("hidden")===""%7C%7Ce.getAttribute("hidden")==="hidden"%7C%7Ce.getAttribute("hidden")==="true")&&e.removeAttribute("hidden"),r.visibility==="hidden"&&(e.style.visibility="visible"),r.display==="none"&&(e.style.display="block"),r.opacity===0&&(e.style.opacity=1)%7Dlet l="",o="",k=document.querySelectorAll("img,%5Brole=img%5D"),d=1,u,m=0,b="",c="";Array.from(k).forEach(function(e)%7Blet r=document.createElement("div");r.appendChild(e.cloneNode(!0)),b=r.innerHTML;let t="",p=!1,y=!1,a=!1,n=!1,w=e.querySelector("%5Baria-hidden=true%5D");w&&w.classList.add("remove-from-accname"),e.setAttribute("data-img-ref",d);let i=e.getAttribute("alt");i===null?(i="NO_ALT_ATTRIBUTE",p=!0):i===""&&(i="EMPTY_ALT_ATTRIBUTE",y=!0);let s=i,A=e.getAttribute("src");if(f(e)&&(T(e),f(e)?t+="img is hidden.<br>":t+="img *was* hidden but has been temporarily revealed on the page.<br>"),p&&(e.getAttribute("role")==="img"&&e.tagName!=="IMG"%7C%7C(t="- img has no <code>alt</code> attribute.<br>",n=!0)),y&&(t="- img has an empty <code>alt</code> attribute. This will hide it from AT. Is this correct?.<br>",a=!0),(e.getAttribute("role")==="presentation"%7C%7Ce.getAttribute("role")==="none")&&(t+="- img has a <code>role</code> set (%27"+e.getAttribute("role")+"%27) that will hide it from AT. Is this correct?.<br>",a=!0),e.getAttribute("aria-hidden")==="true"&&(t+="- img has an <code>aria-hidden=true</code>, so it will be hidden from AT. Is this correct?.<br>",a=!0),e.getAttribute("title")&&(i==="EMPTY_ALT_ATTRIBUTE"?(t+="- img has a <code>title</code> AND an empty <code>alt</code> attribute. Because of the empty alt, the image will be hidden to AT, so the title attribute is not used/exposed.<br>",a=!1,n=!0):(t+=%27- img has a <code>title</code> attribute. This <code>title</code> content -- "%27+e.getAttribute("title")+%27" -- will not be perceivable to assistive tech, keyboard and touch screen users.<br>%27,p?n=!0:a=!0)),e.getAttribute("role")==="button"&&(t+="- img has a <code>role</code> of <code>button</code>. Check that it behaves like a <code>button</code>.<br>",a=!0),e.getAttribute("role")==="img"&&(t+="- Not an inline img, so no <code>alt</code> attribute.<br>"),e.getAttribute("role")==="img"&&e.getAttribute("alt")!==null&&e.tagName!=="IMG"&&(t+="- Background image has an <code>alt</code> attribute specified, but cannot be applied to this element; can only be applied to <code>img</code> element.<br>",a=!1,n=!0),e.tagName!=="IMG"&&e.getAttribute("role")==="img"&&(t+="- This has a <code>role</code> of <code>img</code> but is not an <code>img</code> element.<br>"),e.getAttribute("role")==="img")%7Blet h=!1;if(e.tagName!=="IMG")%7Blet I=e.currentStyle%7C%7Cwindow.getComputedStyle(e,!1),S=I.backgroundImage.slice(4,-1).replace(/"/g,"");if(e.getAttribute("aria-label")!==null&&(h=!0,i=e.getAttribute("aria-label"),s=i,t+="- Accessible name provided by an <code>aria-label</code> attribute.<br>",a=!1),!h&&e.getAttribute("aria-labelledby")!==null)%7Bh=!0;let x=e.getAttribute("aria-labelledby").split(" ");x.length>1?(i="",Array.from(x).forEach(function(B)%7Bi+=document.querySelector("#"+B).textContent+" "%7D),i=i.trim(),t+="- Image gets accessible name from <code>aria-labelledby</code> (multiple sources). Check that the accessible name does not contradict the image on screen<br>",a=!0):(i=document.querySelector("#"+e.getAttribute("aria-labelledby")).textContent,t+="- Image gets accessible name from <code>aria-labelledby</code> (single source). Check that the accessible name does not contradict the image on screen<br>",a=!0),s=i%7D%7Dh%7C%7C(t+="- Image has no accessible name provided. It must be set using <code>aria-labelledby</code> or <code>aria-label</code> (not <code>alt</code>)<br>",n=!0)%7Ds===""&&(e.getAttribute("title")?s=e.getAttribute("title"):s="%5Cu203C%5CuFE0F No alt, no title",t+="%5Cu203C%5CuFE0F No alt.<br>",n=!0),n&&(a=!1),o+="<tr",o+=' data-img-ref="'+d+'"',a&&(o+=' class="issue warn"'),n&&(o+=' class="issue err"'),o+=">",e.tagName==="IMG"?u="<code><img></code>":u='<code>role="img"</code>',(s==="NO_ALT_ATTRIBUTE"%7C%7Cs==="EMPTY_ALT_ATTRIBUTE")&&(i="",s=""),o+="<td>"+u+"</td>",o+='<td><img src="'+A+'" alt="" style="max-width:200px;max-height:200px;"></td>',o+="<td>"+s,s.trim()!==i.trim()&&i.trim()!==""&&(o+='<div class="anDiff">Accessible name differs</div>'),o+="</td>",s.trim()!==i.trim()&&s.trim().toLowerCase()===i.trim().toLowerCase()&&(t+="- Same text but case difference noted (likely not an issue)"),o+="<td>",a&&(o+='<div class="issues">Possible issue(s) found with this image</div>'),n&&(o+='<div class="issues">Definite issue(s) found with this image</div>',c="Image '"+A+%60':%0A%60+t+%60Markup with issue:%0A%60+b+%60%0A---------------%0A%60),o+=t+'<button class="showSnippet" type="button" aria-label="Show markup snippet" aria-expanded="false"><code></></code></button><div class="snippet" hidden><label for="snip'+d+'">Markup snippet</label><textarea id="snip'+d+'" aria-label="Markup snippet for this node">'+b+'</textarea><button type="button" class="decrapulate" aria-label="De-crapulate this markup snippet">De-crapulate</button></div></td>',o+='<td><button data-img-ref="'+d+'" class="highlightButton" type="button" aria-pressed="false" aria-label="Highlight this issue on the page visually">Show</button></td>',o+="</tr>",d++,(a%7C%7Cn)&&(m++,c=c.split("<code>").join("%60").split("</code>").join("%60").split("<br>").join(%60%0A%60).split(%60%0A%0A%60).join(%60%0A%60),console.log(c))%7D),l='<style>%5Baria-pressed=true%5D%7Bcolor:white;background:darkred;%7D;div.issues%7Bfont-weight:bold;%7D;textarea %7Bmargin:5px 0;%7D.snippet label %7Bfont-weight:bold;font-size:0.8em;color:black;%7D.snippet%7Bbackground:#efefef;outline:1px solid #666;padding:5px;margin-top:5px;%7D.checkDiffs%7Bbackground:PapayaWhip;%7D.anDiff%7Bcolor:red;font-weight:bold;font-size:10px;display:block%7D.warn %7Bbackground:lightyellow;%7D.err %7Bbackground:PapayaWhip;color:red;%7D.visually-hidden,.a11y,.visuallyhidden,.sr-text,.sr-only %7Bclip-path: inset(100%25);clip: rect(1px, 1px, 1px, 1px);height: 1px;overflow: hidden;position: absolute;white-space: nowrap;width: 1px;%7D* %7B-webkit-box-sizing: border-box;box-sizing: border-box;%7Dhtml %7B/*border: .75em solid #fff;*/min-height: 100vh;%7Dbody %7Bbackground: #f7f7f5;color: #333;font: 400 105%25/1.4 "Work Sans", sans-serif;margin: 1.5em auto;max-width: 54em;width: 90%25;%7Da:img,a:visited %7Bborder-bottom: 1px solid rgba(42, 122, 130, .5);color: #2b7a82;text-decoration: none;%7Da:hover %7Bborder-bottom: 2px solid;color: #1e565c;%7Dbutton:focus,a:focus %7Bbox-shadow: none;outline-offset: 2px;outline: 3px solid rgba(42, 122, 130, .75);%7Da:focus %7Bborder-bottom: none;%7Da:active %7Bbackground: #333;color: #fff;%7Dcode %7Bfont-family: Consolas, monaco, monospace;-moz-tab-size: 4;tab-size: 4;text-transform: none;white-space: pre-wrap;color:brown;%7Dtextarea %7Bwidth: 100%25%7Dlegend h2, legend h3 %7Bmargin: 0;%7Dtable %7Bborder-collapse: collapse;%7Dth,td %7Bpadding: 10px;border:2px solid #2b7a82;%7Dtable caption %7Bfont-weight: bold;text-align: left;margin:1em 0;%7D</style><h1>List of images on this page.</h1>',l+='<input type="checkbox" id="showPotentialProblemsOnly"><label for="showPotentialProblemsOnly">Show only images where there *may* be issues ('+m+" found)</label>",l+=' <button class="highlightButtonAll" type="button" aria-pressed="false">Highlight all images on page</button>',l+='<table border="1" cellpadding="5"><caption>All images (img elements or elements with role="img") on this page, the accessible name and any issues found</caption><thead><tr valign=top><th>Image type</th><th>Image thumbnail</th><th scope="col">Accessible name</th><th scope="col">Notes</th><th>Highlight on the page</th></tr></thead><tbody>'+o+"</tbody></table>",l+="<script>function showImages()%7B",l+="var refWindow=window.opener;",l+=%60var highlightButtons=document.querySelectorAll(".highlightButton");var imgToHighlight;Array.from(highlightButtons).forEach(highlightButton => %7BhighlightButton.addEventListener("click", e => %7BimgToHighlight="%5Bdata-img-ref='" + highlightButton.getAttribute("data-img-ref") + "'%5D";if (highlightButton.getAttribute("aria-pressed")==="false") %7BrefWindow.document.querySelector(imgToHighlight).setAttribute("tabindex","-1");refWindow.document.querySelector(imgToHighlight).focus();refWindow.document.querySelector(imgToHighlight).style.outline="10px solid darkred";refWindow.document.querySelector(imgToHighlight).style.outlineOffset="-10px";highlightButton.setAttribute("aria-pressed","true");%7D else %7BrefWindow.document.querySelector(imgToHighlight).style.outline="";highlightButton.setAttribute("aria-pressed","false");%7D%7D);%7D);%60,l+='var highlightButtonAll=document.querySelector(".highlightButtonAll");highlightButtonAll.addEventListener("click", e => %7Bif (highlightButtonAll.getAttribute("aria-pressed")==="false") %7BArray.from(highlightButtons).forEach(highlightButton => %7BhighlightButton.setAttribute("aria-pressed","false");highlightButton.click();%7D);highlightButtonAll.setAttribute("aria-pressed","true");%7D else %7BArray.from(highlightButtons).forEach(highlightButton => %7BhighlightButton.setAttribute("aria-pressed","true");highlightButton.click();%7D);highlightButtonAll.setAttribute("aria-pressed","false");%7D%7D);',l+='var imgsToCopy=document.querySelectorAll(".imgToCopy");Array.from(imgsToCopy).forEach(imgToCopy => %7BimgToCopy.addEventListener("focus", e => %7BimgToCopy.select();%7D);%7D);',l+='function hideGoodRows()%7BArray.from(trsWithoutIssue).forEach(trWithoutIssue => %7BtrWithoutIssue.setAttribute("hidden","hidden");%7D);%7Dfunction showGoodRows()%7BArray.from(trsWithoutIssue).forEach(trWithoutIssue => %7BtrWithoutIssue.removeAttribute("hidden");%7D);%7Dvar trsWithoutIssue=document.querySelectorAll("tbody tr:not(.issue)");var showProblemCheckbox=document.querySelector("#showPotentialProblemsOnly");showProblemCheckbox.addEventListener("click", e => %7Bif (showProblemCheckbox.checked) %7BhideGoodRows();%7D else %7BshowGoodRows();%7D%7D);',l+='%7Dwindow.addEventListener("load", (event) => %7BshowImages();%7D);<%5C/script>';let g=window.open("","popUpWinImages","height=800,width=1000");g.document.open(),g.document.write(l),g.document.close()%7Dv()%7D)();%7D)();%0A
+  ```
+
+Edit - Click this to edit everything on the page! (for the most part. At least text, removing certain things, etc.)
+```jsx
+javascript:(function(){document.body.contentEditable = true;})()
+```
+
     
 - RANDOM —
 - DEV —
@@ -282,7 +324,29 @@ Things to Note:
         function SilphFunction() {   setTimeout(function(){ window.open(silph, "_blank"); }, 1000);}
         function TrainerDexFunction() {   setTimeout(function(){ window.open(trainerdex, "_blank"); }, 1000);}
         ```
-        
+
+## Links to Useful Sites -- 
+
+### Learning JavaScript -
+[Learn JS (https://learn-js.org/)]
+```embed
+title: "Learn JavaScript - Free Interactive JavaScript Tutorial"
+image: "https://www.learn-js.org/static/img/share-logos/learn-js.org.png"
+description: "learn-js.org is a free interactive JavaScript tutorial for people who want to learn JavaScript, fast."
+url: "https://learn-js.org/"
+```
+
+[Intro to Programming: Loops (thatandromeda.github.io)]
+```embed
+title: "Intro to Programming: Loops"
+image: "https://thatandromeda.github.io/courseware/Intro-via-jQuery/img/screenshot-chrome.png"
+description: "Yay programming!"
+url: "https://thatandromeda.github.io/courseware/Intro-via-jQuery/intro.html"
+```
+
+### Tools - 
+* [Make Bookmarklets](https://make-bookmarklets.com/) - Super useful for turning JS code into a bookmarklet
+
 
 # 🔧 Bookmarklet Tools :
 
