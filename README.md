@@ -72,6 +72,9 @@ Template (ignore) -
         javascript:void%28%28%29%3D%3E%7B%28function%28%29%7B%22use%20strict%22%3Bfunction%20m%28t%29%7Blet%20a%2Co%3Dt%2Cs%3Dt.tagName.toLowerCase%28%29%2Ci%3D%22%22%2Cd%3D%22%22%2Cl%3D%22%22%2Cr%3D%22%22%3Bfor%28%3Bo.parentNode%3B%29%7Bif%28%28a%3Do.parentNode%29.tagName%29%7Bi%3Da.tagName.toLowerCase%28%29%3Blet%20c%3Da.querySelectorAll%28%22%3Ascope%20%3E%20%22+o.tagName%29%3Bl%3Dc.length%3E1%3F%22%5B%22+parseInt%28Array.from%28c%29.indexOf%28o%29+1%29+%22%5D%22%3A%22%22%2Cd%3D%28s%3Do.tagName.toLowerCase%28%29%29+l+r+d%2Cr%3D%22/%22%7D%0Ao%3Da%7D%0Areturn%20i%3D%3D%3D%22%22%26%26%28i%3Ds%29%2Cd%3D%22//%22+i+l+r+d%7D%0Afunction%20y%28%29%7Blet%20t%2Ca%2Co%2Cs%3D%210%2Ci%3D%211%2Cd%3Ddocument.querySelectorAll%28%22*%22%29%3Bfunction%20l%28e%2Cn%29%7Bt%3De%2Cn.stopPropagation%28%29%2Ci%7C%7Cc%28e%29%2Cp%28t%29%7D%0Afunction%20r%28e%29%7Be.classList.remove%28%22isolatorHighlight%22%29%7D%0Afunction%20c%28e%29%7Be.classList.add%28%22isolatorHighlight%22%29%7D%0Afunction%20p%28e%29%7Bconsole.clear%28%29%2Cconsole.log%28m%28e%29%29%2Co.innerHTML%3Dm%28e%29%7D%0AArray.from%28d%29.forEach%28e%3D%3E%7Be.addEventListener%28%22click%22%2Cn%3D%3E%7Bconsole.log%28%22preventClicks%20%3D%20%22%2Cs%29%2Cs%26%26%28function%28f%2Cu%29%7Bt%3Df%2Cf.tagName%3D%3D%3D%22HTML%22%26%26%28s%3D%211%29%2Cfunction%28g%29%7Bif%28%21i%29%7Blet%20h%3Dg.parentNode%2Cv%3Dh.childNodes%3Bh.tagName%21%3D%3D%22HTML%22%3FArray.from%28v%29.forEach%28x%3D%3E%7Bx%21%3D%3Dg%26%26x.remove%28%29%7D%29%3Ai%3D%210%7D%7D%28f%29%7D%28e%29%2Cn.preventDefault%28%29%29%7D%29%2Ce.addEventListener%28%22mouseover%22%2Cn%3D%3E%7Bt%3De%2Cn.stopPropagation%28%29%2Ci%7C%7Cc%28e%29%2Cp%28t%29%7D%29%2Ce.addEventListener%28%22mouseout%22%2Cn%3D%3E%7Br%28e%29%7D%29%7D%29%2Cfunction%28%29%7Blet%20e%3Ddocument.createElement%28%22style%22%29%3Be.textContent%3D%22.isolatorHighlight%7Boutline%3A4px%20solid%20black%21important%3Boutline-offset%3A-4px%21important%3B-webkit-box-shadow%3A%200px%200px%200px%204px%20%23fff%3B%20box-shadow%3A%200px%200px%200px%204px%20%23fff%3B%7D%23infoPanel%20%7Bz-index%3A1000%3Bfont-size%3A20px%3Bbackground%3Argba%280%2C0%2C0%2C0.8%29%3Bcolor%3A%23fff%3Bfont-weight%3Abold%3Bpadding%3A10px%3Bposition%3Afixed%3Bbottom%3A20px%3Bleft%3A20px%3Bfont-family%3Asans-serif%3B%7D%20%23infoPanel%3Aempty%20%7Bvisibility%3Ahidden%3B%7D%20%23infoPanel%20code%20%7Bcolor%3Alime%7D%22%2Cdocument.head.appendChild%28e%29%7D%28%29%2C%28o%3Ddocument.createElement%28%22div%22%29%29.setAttribute%28%22id%22%2C%22infoPanel%22%29%2Co.setAttribute%28%22role%22%2C%22status%22%29%2Cdocument.body.appendChild%28o%29%2Cdocument.addEventListener%28%22keydown%22%2Cfunction%28e%29%7Bif%28e.key%3D%3D%3D%22ArrowUp%22%26%26%28e.preventDefault%28%29%2Ct.parentNode%26%26t.tagName%21%3D%3D%22HTML%22%26%26%28r%28t%29%2Cconsole.log%28%22currentEl.parentNode%20%3D%20%22%2Ct.parentNode%29%2Ca%3Dt.parentNode%2Cc%28t%3Da%29%29%2Cp%28t%29%2Co.textContent%3Do.textContent+%22%20%28Press%20Return%20to%20isolate%20this%20element%29%22%29%2Ce.key%3D%3D%3D%22ArrowLeft%22%26%26%28e.preventDefault%28%29%2Ct.previousElementSibling%26%26%28r%28t%29%2Cl%28t%3Dt.previousElementSibling%2Ce%29%29%29%2Ce.key%3D%3D%3D%22ArrowRight%22%26%26%28e.preventDefault%28%29%2Ct.nextElementSibling%26%26%28r%28t%29%2Cl%28t%3Dt.nextElementSibling%2Ce%29%29%29%2Ce.key%3D%3D%3D%22ArrowDown%22%26%26%28e.preventDefault%28%29%2Ct.childNodes.length%3E1%29%29%7Br%28t%29%3Blet%20n%2Cf%3D%211%3BArray.from%28t.childNodes%29.forEach%28u%3D%3E%7Bu.nodeType%21%3D%3D1%7C%7Cf%7C%7C%28f%3D%210%2Cn%3Du%29%7D%29%2Cn%26%26l%28t%3Dn%2Ce%29%7D%0Ae.key%3D%3D%3D%22Enter%22%26%26%28e.preventDefault%28%29%2Ct.click%28%29%29%7D%29%2Cp%28%22Isolator%20started.%20Click%20on%20element%20you%20want%20to%20isolate%20in%20the%20DOM%22%29%7D%0Ay%28%29%7D%29%28%29%3B%7D%29%28%29%3B
 
         ```
+---
+SORT -- 
+
 Yandex Reverse Image - Click the bookmarklet, then click on any image currently on the page
 ```jsx
 javascript:javascript%3Afunction yandexify%28event%29%7Blet img%3Devent.target%3Blet y%3D%27https%3A//yandex.com/images/search%3Frpt%3Dimageview%26url%3D%27%3Bwindow.open%28y+img.src%29%3Bimg.removeEventListener%28%27click%27%2Cyandexify%29%3B%7D%0AArray.from%28document.querySelectorAll%28%27img%27%29%29.forEach%28el%3D>el.addEventListener%28%27click%27%2Cyandexify%29%29%3B   
@@ -86,6 +89,28 @@ Edit - Click this to edit everything on the page! (for the most part. At least t
 ```jsx
 javascript:(function(){document.body.contentEditable = true;})()
 ```
+
+Get a full list of links from page in a small popup -
+```jsx
+javascript:(function(){var e=[],t=document.getElementsByTagName("a"),n=t.length,r=window.open("","win","width=300,height=300");for(;n>0;n--){var i=t[n-1].getAttribute("href");t[n-1]!=null&&i!=null&&i.charAt(0)==="h"&&i.indexOf(window.location.hostname)==-1&&e.push("<li><a href="+i+">"+i+"</a></li>")}r.document.open("text/html","replace"),r.document.write("<h1>Links Found:</h1><ul>"+e.join("")+"</ul>")})() 
+```
+
+Robots.txt - Get info from the robots.txt for the page you're currently viewing -
+```jsx
+javascript:%28function%28%29%7Bvar%20t%3Ddocument.createElement%28%22style%22%29%3Bt.innerHTML%3D%22@import%20url%28%27https%3A//cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css%27%29%22%3Bdocument.head.appendChild%28t%29%3Bvar%20e%3Dfunction%28%29%7Bvar%20t%3Ddocument.createElement%28%22div%22%29%3Bt.className%3D%22fixed%20inset-0%20flex%20items-center%20justify-center%20bg-black%20bg-opacity-50%20z-50%22%3Bvar%20e%3Ddocument.createElement%28%22div%22%29%3Be.className%3D%22relative%20bg-white%20rounded-md%20shadow-lg%20p-6%20max-w-md%20mx-auto%20flex%20flex-col%20space-y-4%22%3Bt.appendChild%28e%29%3Bvar%20n%3Ddocument.createElement%28%22div%22%29%3Bn.className%3D%22overflow-auto%20max-h-96%22%2Ce.appendChild%28n%29%3Bvar%20o%3Ddocument.createElement%28%22button%22%29%3Bo.textContent%3D%22Close%22%2Co.className%3D%22bg-blue-500%20text-white%20px-3%20py-1%20rounded-md%20self-start%20mt-auto%22%2Ce.appendChild%28o%29%2Ct.addEventListener%28%22click%22%2Cfunction%28e%29%7Be.target%3D%3D%3Dt%26%26t.remove%28%29%7D%29%2Co.addEventListener%28%22click%22%2Cfunction%28%29%7Bt.remove%28%29%7D%29%2Cdocument.body.appendChild%28t%29%3Breturn%20n%7D%28%29%2Cn%3Ddocument.createElement%28%22pre%22%29%2Co%3Dlocation.protocol+%22//%22+location.hostname+%22/robots.txt%22%3Bfetch%28o%29.then%28function%28t%29%7Breturn%20t.text%28%29%7D%29.then%28function%28t%29%7Bn.textContent%3Dt%2Ce.innerHTML%3D%27%3Ch2%20class%3D%22text-xl%20font-semibold%20mb-4%22%3ERobots.txt%20Content%3C/h2%3E%3Cp%20class%3D%22text-gray-700%20mb-4%22%3EThe%20content%20of%20the%20robots.txt%20file%20is%20shown%20below%3A%3C/p%3E%3Ca%20href%3D%22%27+o+%27%22%20target%3D%22_blank%22%20class%3D%22text-blue-500%20mb-4%22%3EOpen%20robots.txt%20in%20a%20new%20tab%3C/a%3E%27%2Ce.appendChild%28n%29%7D%29.catch%28function%28t%29%7Bconsole.warn%28%22Error%20fetching%20robots.txt%3A%22%2Ct%29%7D%29%7D%29%28%29%3B 
+```
+
+Search a username in WhatsMyName.app which is a great little OSINT / SOCMINT tool -
+```jsx
+javascript:input = prompt("Enter username to search on WhatsMyName");wmn = ("https://whatsmyname.app/?q=%22)%20+%20input;function%20Wmn()%20{window.open(wmn);}Wmn();
+```
+
+Template (ignore) -
+```jsx
+   
+```
+
+
 
     
 - RANDOM —
